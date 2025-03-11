@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="mt-8 mb-16">
-          <div className="relative max-w-2xl mx-auto">
-            <div className="video-thumbnail rounded-lg overflow-hidden">
+          <div className="relative max-w-md mx-auto">
+            <div className="video-thumbnail rounded-lg overflow-hidden shadow-md">
               <img 
                 src="/lovable-uploads/a5dd5348-7e6e-4645-8e25-d99a48076102.png" 
                 alt="Introducing Manus" 
@@ -25,17 +25,19 @@ const Hero: React.FC = () => {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="play-button" aria-label="Play video">
-                  <div className="bg-black rounded-full flex items-center justify-center w-12 h-12">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div className="bg-black rounded-full flex items-center justify-center w-10 h-10">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5 3L19 12L5 21V3Z" fill="white"/>
                     </svg>
                   </div>
                 </div>
               </div>
             </div>
-            <Button className="bg-black text-white hover:bg-black/90 rounded-full px-10 py-6 text-sm font-medium mt-6">
-              Try Manus
-            </Button>
+            <div className="mt-6 flex justify-center">
+              <Button className="bg-black text-white hover:bg-black/90 rounded-full px-8 py-2 text-sm font-medium">
+                Try Manus
+              </Button>
+            </div>
           </div>
         </div>
 
