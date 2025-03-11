@@ -98,7 +98,7 @@
 
   body {
     @apply bg-background text-foreground font-poppins antialiased;
-    background: linear-gradient(180deg, #fcfcfc 0%, #f8f8f8 100%);
+    background: linear-gradient(180deg, #fcfcfc 0%, #f5f5f5 100%);
   }
 }
 
@@ -114,8 +114,8 @@
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .video-thumbnail::before {
@@ -137,24 +137,11 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
+  transition: transform 0.2s ease-in-out;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.video-thumbnail:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Animations */
@@ -190,6 +177,7 @@
 .hero-background {
   background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .hero-background::before {
@@ -201,6 +189,19 @@
   height: 100%;
   background-image: radial-gradient(#e6e6e6 0.5px, transparent 0.5px);
   background-size: 24px 24px;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: -1;
+}
+
+/* Features section gradient background */
+.features-background {
+  background: linear-gradient(180deg, #f9f9f9 0%, #f1f1f1 100%);
+  position: relative;
+}
+
+/* Subtle gradient overlay for card elements */
+.card-gradient {
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
