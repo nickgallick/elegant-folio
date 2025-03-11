@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-4 transition-all duration-300 ease-in-out",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           <svg width="20" height="20" viewBox="0 0 24 24" className="text-black">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </svg>
-          <span className="text-lg font-medium tracking-tight">manus</span>
+          <span className="text-lg font-semibold tracking-tight">manus</span>
         </a>
         
         <nav className="hidden md:flex items-center space-x-8">

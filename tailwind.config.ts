@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,6 +24,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				poppins: ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -109,6 +109,9 @@ export default {
 				'fade-in-slow': 'fade-in-slow 0.8s ease-out forwards',
 				'slide-up': 'slide-up 0.6s ease-out forwards',
 				'blur-in': 'blur-in 0.6s ease-out forwards'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))',
 			}
 		}
 	},

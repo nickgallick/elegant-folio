@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center py-20 px-6 md:px-10 overflow-hidden">
+    <section className="relative flex flex-col items-center pt-28 pb-20 px-6 md:px-10 overflow-hidden hero-background">
       <div className="max-w-3xl mx-auto w-full text-center space-y-6">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight animate-fade-in">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight animate-fade-in font-poppins">
           Leave it to Manus
         </h1>
         
