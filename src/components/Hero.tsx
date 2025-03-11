@@ -17,12 +17,8 @@ const Hero: React.FC = () => {
 
         <div className="mt-8 mb-16">
           <div className="relative max-w-md mx-auto">
-            <div className="video-thumbnail rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="/lovable-uploads/a5dd5348-7e6e-4645-8e25-d99a48076102.png" 
-                alt="Introducing Manus" 
-                className="w-full h-auto rounded-lg"
-              />
+            <div className="video-thumbnail rounded-lg overflow-hidden shadow-md bg-gray-100 flex items-center justify-center" style={{ height: "225px", width: "400px" }}>
+              <span className="text-gray-500 text-sm">Video Placeholder</span>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="play-button" aria-label="Play video">
                   <div className="bg-black rounded-full flex items-center justify-center w-10 h-10">
