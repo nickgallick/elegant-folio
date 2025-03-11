@@ -31,16 +31,16 @@ const Header: React.FC = () => {
         </a>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#product" className="text-sm font-medium text-gray-800 hover:text-black transition-colors">
+          <a href="#product" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
             Product
           </a>
-          <a href="#pricing" className="text-sm font-medium text-gray-800 hover:text-black transition-colors">
+          <a href="#pricing" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
             Pricing
           </a>
-          <a href="#company" className="text-sm font-medium text-gray-800 hover:text-black transition-colors">
+          <a href="#company" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
             Company
           </a>
-          <a href="#contact" className="text-sm font-medium text-gray-800 hover:text-black transition-colors">
+          <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
             Contact
           </a>
         </nav>
@@ -48,13 +48,13 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <a 
             href="/login" 
-            className="hidden md:inline-flex text-sm font-medium text-gray-800 hover:text-black transition-colors"
+            className="hidden md:inline-flex text-sm font-medium text-gray-600 hover:text-black transition-colors"
           >
             Log in
           </a>
           <a 
             href="/signup" 
-            className="rounded-full bg-black text-white px-4 py-2 text-xs font-medium hover:bg-gray-800 transition-colors"
+            className="rounded-full bg-black text-white px-5 py-2 text-sm font-medium hover:bg-gray-800 transition-colors"
           >
             Try for free
           </a>
