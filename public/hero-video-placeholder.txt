@@ -1,0 +1,7 @@
+
+This is a placeholder text file. Please replace it with an actual image file named "hero-video-placeholder.jpg" to display in the video thumbnail area.
+
+Recommended specifications:
+- Size: 1280x720px
+- Format: JPG or PNG
+- Content: A high-quality image showing a demo of the manus AI product interface

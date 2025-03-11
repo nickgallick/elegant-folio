@@ -1,12 +1,60 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React, { useEffect } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import Footer from '@/components/Footer';
+import BackgroundDots from '@/components/BackgroundDots';
+
+const Index: React.FC = () => {
+  useEffect(() => {
+    // Smooth scroll animation for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100, // Offset for header
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Adding animation classes to elements when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+      observer.observe(element);
+    });
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col relative overflow-hidden">
+      <BackgroundDots />
+      <Header />
+      
+      <main className="flex-grow">
+        <Hero />
+        <Features />
+        
+        {/* Additional sections would go here */}
+      </main>
+      
+      <Footer />
     </div>
   );
 };
