@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import BackgroundDots from '@/components/BackgroundDots';
 
 const Index: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  
   useEffect(() => {
     // Smooth scroll animation for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -37,14 +39,22 @@ const Index: React.FC = () => {
       observer.observe(element);
     });
     
+    // Track scroll position for parallax effect
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
     return () => {
       observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      <BackgroundDots />
+      {/* Using colorful dots for main background */}
       <Header />
       
       <main className="flex-grow">

@@ -1,11 +1,14 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import BackgroundDots from './BackgroundDots';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative flex flex-col items-center pt-32 pb-28 px-6 md:px-10 overflow-hidden hero-background">
-      <div className="max-w-3xl mx-auto w-full text-center space-y-8">
+      <BackgroundDots colorful={true} className="opacity-40" />
+      
+      <div className="max-w-3xl mx-auto w-full text-center space-y-8 relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight animate-fade-in font-poppins">
           Leave it to Manus
         </h1>
@@ -23,7 +26,7 @@ const Hero: React.FC = () => {
 
         <div className="mt-16 mb-20">
           <div className="relative mx-auto">
-            <div className="video-thumbnail rounded-lg overflow-hidden shadow-md bg-gray-50 flex items-center justify-center" style={{ height: "380px", width: "676px", maxWidth: "100%" }}>
+            <div className="video-thumbnail rounded-lg overflow-hidden shadow-md bg-gray-50 flex items-center justify-center" style={{ height: "494px", width: "879px", maxWidth: "100%" }}>
               <span className="text-gray-500 text-sm font-poppins">Video Placeholder</span>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="play-button" aria-label="Play video">
