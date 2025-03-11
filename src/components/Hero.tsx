@@ -5,7 +5,7 @@ import BackgroundDots from './BackgroundDots';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center pt-32 pb-28 px-6 md:px-10 overflow-hidden hero-background">
+    <section className="relative flex flex-col items-center pt-32 pb-16 px-6 md:px-10 overflow-hidden hero-background">
       <BackgroundDots colorful={true} className="opacity-40" />
       
       <div className="max-w-3xl mx-auto w-full text-center space-y-8 relative z-10">
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           </Button>
         </div>
 
-        <div className="mt-16 mb-20">
+        <div className="mt-16">
           <div className="relative mx-auto">
             <div className="video-thumbnail rounded-lg overflow-hidden shadow-md bg-gray-50 flex items-center justify-center" style={{ height: "494px", width: "879px", maxWidth: "100%" }}>
               <span className="text-gray-500 text-sm font-poppins">Video Placeholder</span>
@@ -41,8 +41,8 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center pt-10">
-          <h2 className="text-xl font-medium mb-10 font-poppins">Use case gallery</h2>
+        <div className="text-center pt-10 pb-8">
+          <h2 className="text-xl font-medium mb-6 font-poppins">Use case gallery</h2>
           {/* This will be replaced with the use case gallery component */}
         </div>
       </div>

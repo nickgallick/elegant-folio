@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -54,13 +53,11 @@ const Index: React.FC = () => {
   
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Using colorful dots for main background */}
       <Header />
       
       <main className="flex-grow">
         <Hero />
         <Features />
-        {/* Additional sections would go here */}
       </main>
       
       <Footer />
