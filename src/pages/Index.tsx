@@ -17,7 +17,7 @@ const Index: React.FC = () => {
         
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 100, // Offset for header
+            top: targetElement.offsetTop - 80,
             behavior: 'smooth'
           });
         }
@@ -50,7 +50,6 @@ const Index: React.FC = () => {
       <main className="flex-grow">
         <Hero />
         <Features />
-        
         {/* Additional sections would go here */}
       </main>
       

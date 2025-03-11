@@ -10,7 +10,7 @@ const BackgroundDots: React.FC<BackgroundDotsProps> = ({ className }) => {
   return (
     <div 
       className={cn(
-        "absolute inset-0 dot-pattern opacity-50 pointer-events-none z-0",
+        "absolute inset-0 dot-pattern opacity-20 pointer-events-none z-0",
         className
       )}
       aria-hidden="true"
